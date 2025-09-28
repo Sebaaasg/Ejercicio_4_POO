@@ -52,5 +52,13 @@ public abstract class Combatiente {
     public void setPoderDeAtaque(int poderDeAtaque){
         this.poderDeAtaque = poderDeAtaque;
     }
+    public void setPuntosDeVida(int puntosDeVida){
+        this.puntosDeVida = puntosDeVida;
+    }
+
+    @Override
+    public String toString(){
+        return nombre + " (Vida: " + puntosDeVida + ", Ataque: " + poderDeAtaque + ")";
+    }
 
 }
