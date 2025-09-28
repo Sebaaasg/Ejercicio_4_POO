@@ -6,32 +6,19 @@
 public abstract class Item {
     // ATRIBUTOS
     protected String nombre;
-    protected int cantidad;
 
     // CONSTRUCTOR
-    public Item(String nombre, int cantidad){
+    public Item(String nombre){
         this.nombre = nombre;
-        this.cantidad = cantidad;
     }
 
     // MÉTODO: método abstracto para que se defina cómo utilizarán el ítem las subclases
-    public abstract String usar(Combatiente objetivo, Combatiente usuario);
+    public abstract String usar(Combatiente objetivo);
 
-    // GETTERS Y SETTERS
-    public String getNombre(){
-        return nombre;
-    }
-    public int getCantidad(){
-        return cantidad;
-    }
-
-    public void setCantidad(int cantidad){
-        this.cantidad = cantidad;
-    }
-
+    // "GETTER"
     @Override
     public String toString(){
-        return nombre + " (x" + cantidad + ")";
+        return nombre;
     }
 
 }

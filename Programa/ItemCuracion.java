@@ -5,15 +5,17 @@
 
 public class ItemCuracion extends Item {
     // ATRIBUTOS
-    private int puntosDeVidaCurados;
+    private int puntosCuracion;
 
     // CONSTRUCTOR
-    public ItemCuracion(String nombre, int cantidad, int puntosDeVidaCurados){
-        super(nombre, cantidad);
-        this.puntosDeVidaCurados = puntosDeVidaCurados;
+    public ItemCuracion(){
+        super("Pocion de vida");
+        this.puntosCuracion = 50;
     }
 
     @Override
-    public String usar(Combatiente objetivo, Combatiente usuario){
+    public String usar(Combatiente objetivo){
+        objetivo.setPuntosDeVida(objetivo.getPuntosDeVida() + puntosCuracion);
+        return objetivo.getNombre() + " se cura " + puntosCuracion + " puntos de vida";
     }
 }

@@ -45,6 +45,9 @@ public abstract class Combatiente {
     public int getPuntosDeVida(){
         return puntosDeVida;
     }
+    public int getPoderDeAtaque(){
+        return poderDeAtaque;
+    }
     public boolean isEstaVivo(){
         return estaVivo;
     }

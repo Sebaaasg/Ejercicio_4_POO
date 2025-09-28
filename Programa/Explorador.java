@@ -6,6 +6,6 @@
 public class Explorador extends Jugador {
     public Explorador(String nombre){
         // stats: vida normal, ataque normal, alta   capacidad de inventario
-        super(nombre, 100, 15, 5);
+        super(nombre,100, 15, 5);
     }
 }
